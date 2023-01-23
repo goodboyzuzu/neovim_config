@@ -22,8 +22,7 @@ require("code_runner").setup({
 		python = "python3",
 		typescript = "deno run",
 		rust = "cd $dir && rustc $fileName && $dir/$fileNameWithoutExt",
-		cpp = "cd $dir && g++ $fileName -Wall -Weffc++ -Wextra -Wsign-conversion -ggdb -std=c++20 -o $fileNameWithoutExt && $dir/$fileNameWithoutExt",
-		-- cpp = "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir/$fileNameWithoutExt",
+		cpp = "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir/$fileNameWithoutExt",
 	},
 })
 
