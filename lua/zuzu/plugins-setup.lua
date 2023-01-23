@@ -108,7 +108,10 @@ return packer.startup(function(use)
 
 	--github copilot
 	use({ "github/copilot.vim" })
-	--
+
+    -- Markdown previewing (only for Mac and Windows)
+    use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+
 
 	if packer_bootstrap then
 		require("packer").sync()
