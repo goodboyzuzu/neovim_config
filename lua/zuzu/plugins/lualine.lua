@@ -5,7 +5,7 @@ if not status then
 end
 
 -- get lualine nightfly theme
-local lualine_nightfly = require("lualine.themes.nightfly")
+-- local lualine_nightfly = require("lualine.themes.nightfly")
 
 -- new colors for theme
 local new_colors = {
@@ -17,6 +17,8 @@ local new_colors = {
 }
 
 -- change nightlfy theme colors
+
+--[[
 lualine_nightfly.normal.a.bg = new_colors.blue
 lualine_nightfly.insert.a.bg = new_colors.green
 lualine_nightfly.visual.a.bg = new_colors.violet
@@ -27,11 +29,12 @@ lualine_nightfly.command = {
 		fg = new_colors.black, -- black
 	},
 }
-
+]]
 -- configure lualine with modified theme
 lualine.setup({
 	options = {
-		theme = lualine_nightfly,
+		-- theme = lualine_nightfly,
+        theme = "catppuccin"
 	},
 	sections = { lualine_c = { { "filename", path = 1 } } },
 })
